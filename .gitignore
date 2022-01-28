@@ -1,2 +1,4 @@
 testFtprintf
 *.swp
+*.o
+*.a

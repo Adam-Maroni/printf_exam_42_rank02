@@ -144,6 +144,8 @@ int ft_printf(const char *str, ...)
 		else if (*str == '%' && *(str + 1) == 's')
 		{
 			tmp = va_arg(args, char *);
+			if (!tmp)
+				tmp = "(null)";
 			write(1, tmp, ft_strlen(tmp) * sizeof(char));
 			counter += ft_strlen(tmp);
 			tmp = NULL;
