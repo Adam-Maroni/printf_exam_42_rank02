@@ -79,7 +79,7 @@ char *ft_itoa(int nb)
 }
 
 
-char *ft_int2hex(int nb)
+char *ft_int2hex(unsigned int nb)
 {
 	int i = 0;
 	int y = 0;
@@ -134,7 +134,7 @@ int ft_printf(const char *str, ...)
 		}
 		else if (*str == '%' && *(str + 1) == 'x')
 		{
-			tmp = ft_int2hex(va_arg(args, int));
+			tmp = ft_int2hex(va_arg(args, unsigned int));
 			write(1, tmp, ft_strlen(tmp) * sizeof(char));
 			counter += ft_strlen(tmp);
 			free(tmp);

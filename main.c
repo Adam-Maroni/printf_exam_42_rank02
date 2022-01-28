@@ -66,5 +66,29 @@ int main(void)
 	else
 		printf("Correct\n");
 //---------------------------------------------------------------------------------
+	printf("--------------------------CASE 6--------------------------\n");
+	printf_rt_value = printf("%x\n", (unsigned int)INT_MAX + 1);
+	ftprintf_rt_value = ft_printf("%x\n", (unsigned int)INT_MAX + 1);
+	if (printf_rt_value != ftprintf_rt_value)
+	{
+		printf("ERROR \n");
+		printf("printf_rt_value = %d\n", printf_rt_value);
+		ft_printf("ftprintf_rt_value = %d\n", ftprintf_rt_value);
+	}
+	else
+		printf("Correct\n");
+//---------------------------------------------------------------------------------
+	printf("--------------------------CASE 7--------------------------\n");
+	printf_rt_value = printf("%x\n", (unsigned int)INT_MIN - 1);
+	ftprintf_rt_value = ft_printf("%x\n", (unsigned int)INT_MIN - 1);
+	if (printf_rt_value != ftprintf_rt_value)
+	{
+		printf("ERROR \n");
+		printf("printf_rt_value = %d\n", printf_rt_value);
+		ft_printf("ftprintf_rt_value = %d\n", ftprintf_rt_value);
+	}
+	else
+		printf("Correct\n");
+//---------------------------------------------------------------------------------
 	return (0);
 }
